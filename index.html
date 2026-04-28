@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário, Khaos!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content anime-up">
+            <span class="badge">28 de Abril</span>
+            <h1>Feliz Aniversário, Khaos! 🎈</h1>
+            <p>Obrigada por seres o meu maridinho e melhor amigo.</p>
+            
+            <div id="countdown" class="countdown-container">
+                <div class="time-block"><span id="days">00</span><small>Dias</small></div>
+                <div class="time-block"><span id="hours">00</span><small>Horas</small></div>
+                <div class="time-block"><span id="minutes">00</span><small>Mins</small></div>
+            </div>
+
+            <div class="buttons">
+                <button class="btn-celebrar" onclick="celebrar()">Confetis! ✨</button>
+                <button class="btn-carta" onclick="toggleCarta()">Ler a minha carta 💌</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="sessaoCarta" class="modal-overlay hidden">
+        <div class="carta-papel">
+            <h2>Para o meu amor, ❤️</h2>
+            <div class="texto-carta">
+                <p>Acho que não tenho palavras para descrever quão importante e especial você é pra mim e pra minha vida, sem duvidas eu nao sobreviveria até agora sem ter você do meu lado, você é uma pessoal imensamente maravilhosa, especial, cheia de alegria, cheia de gentileza para distribuir, você é meu tudinho. Cada momento ao seu lado sempre foi e sempre será especial para mim!! Jogar, ver series ou somente conversar sempre foi um maximo quando feito contigo, caso você nao saiba, eu te amo, tipo...muito. MUITO MESMO!! E so desejo que nossa amizade continue pro resto de nossas vidas, e tudo que desejo, é que você so tenha paz, sorrisos, risos e alegria na sua vida. Eu torço pra que eu um dia qualquer sofrimento ou dor que tenha passado se torne um simples borrão na sua vida, por que você merece ser feliz e viver feliz. 
+
+Eu sei que muitas vezes a vida é dificil e pode nos colocar pra baixo diversas vezes, mas eu sempre vou estar aqui pra te ajudar e te erguer quantas vezes forem necessarias. Pode confiar e eu prometo que pode confiar que eu sempre foi estar contigo, mesmo que seja de longe, eu sempre estarei la, seja pra momentos bons ou momentos ruins, por que é isso que é amizade, é voce estar la independente de quão bom ou quão ruim a situação esteja. Acho que isso resume muito nossa amizade sabe? Sempre estamos la uma pela outra seja o que for. E eu amo isso em você, amo isso na gente e como isso reflete nossa amizade.
+
+Eu gostaria de um dia conseguir mostrar o quanto eu te amo, mas como é tipo MUITISSIMO!! Eu acho dificil conseguir demonstrar o tanto e eu diria que você é claramente um dos meus motivos por nunca ter desistido de fato. Eu só espero que esse ano seja maravilhoso pra você, que tudo que você deseja você vai conquistar, e eu sei que consegue e vai conseguir, eu vou torcer por você até o fim dessa corrida da vida e se possivel vou querer correr com você durante ela todinha.
+
+Vejo muitas pessoas disserem que nada dura pra sempre sabe? Mas eu espero que a nossa amizade seja a exceção.</p>
+            </div>
+            <button class="btn-fechar-carta" onclick="toggleCarta()">Fechar</button>
+        </div>
+    </div>
+
+    <section id="secao-fotos" class="fotos bg-dark">
+        <div class="container anime-up">
+            <h2 class="gradient-text">Nossos Momentos Favoritos 📸</h2>
+            <p class="instrucao">Toca em cada memória para a reviver ✨</p>
+            <div class="grid-fotos">
+                <div class="foto-card" style="background-image: url('assets/foto1.png');"><span>Partidinha no Party Animals e Muita Conversa</span></div>
+                <div class="foto-card" style="background-image: url('assets/foto2.png');"><span>Vesguinho no REPO</span></div>
+                <div class="foto-card" style="background-image: url('assets/foto3.png');"><span>Com o meu Best!</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="secao-videos" class="videos bg-alt">
+        <div class="container anime-up">
+            <h2 class="gradient-text">Clips 🎬</h2>
+            <p class="instrucao">Momentos e Risadas</p>
+            <div class="grid-videos">
+                <div class="video-card">
+                    <video controls><source src="assets/video1.mp4" type="video/mp4"></video>
+                    <span>Palmadinhas</span>
+                </div>
+                <div class="video-card">
+                    <video controls><source src="assets/video2.mp4" type="video/mp4"></video>
+                    <span>Momento Especial</span>
+                </div>
+            </div> 
+        </div>
+    </section> 
+
+    <section id="secao-toji" class="carrossel-section bg-dark">
+        <div class="container anime-up">
+            <h2 class="gradient-text">Nosso Meninão (Toji) 🐰</h2>
+            <p class="instrucao">A fofura em forma de coelhinho</p>
+            
+            <div id="toji-slider" class="slider-container">
+                <button class="arrow prev" onclick="moveSlide('toji-slider', -1)">&#10094;</button>
+                <div class="slider">
+                    <div class="slide foto-card" style="background-image: url('assets/Toji1.jpeg');"><p class="caption">Toji mimindo!</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Toji2.jpeg');"><p class="caption">Toji fofo</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Toji3.jpeg');"><p class="caption">Carinha do Toji</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Toji4.jpeg');"><p class="caption">Toji Deitadinho</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Toji5.jpeg');"><p class="caption">Toji de Buchin Cheio</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Toji6.jpeg');"><p class="caption">Toji na sua caminha</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Toji7.jpeg');"><p class="caption">Toji Deitadinho 2</p></div>
+                </div>
+                <button class="arrow next" onclick="moveSlide('toji-slider', 1)">&#10095;</button>
+            </div>
+            
+            <div class="grid-videos videos-pet">
+                <div class="video-card">
+                    <video controls><source src="assets/VideoToji1.mp4" type="video/mp4"></video>
+                    <span>Habitat do Toji</span>
+                </div>
+                <div class="video-card">
+                    <video controls><source src="assets/VideoToji2.mp4" type="video/mp4"></video>
+                    <span>Toji em alerta máxima!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="secao-noelle" class="carrossel-section bg-alt">
+        <div class="container anime-up">
+            <h2 class="gradient-text">Nossa Princesa (Noelle) 🐰</h2>
+            <p class="instrucao">A fofura em forma de coelhinha</p>
+            
+            <div id="noelle-slider" class="slider-container">
+                <button class="arrow prev" onclick="moveSlide('noelle-slider', -1)">&#10094;</button>
+                <div class="slider">
+                    <div class="slide foto-card" style="background-image: url('assets/Noelle1.jpeg');"><p class="caption">Noelle mimindo!</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Noelle2.jpeg');"><p class="caption">Noelle fofa</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Noelle3.jpeg');"><p class="caption">Carinha da Noelle</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Noelle4.jpeg');"><p class="caption">Noelle Deitadinha</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Noelle5.jpeg');"><p class="caption">Noelle de Buchin Cheio</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Noelle6.jpeg');"><p class="caption">Noelle na sua caminha</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Noelle7.jpeg');"><p class="caption">Noelle Deitadinha 2</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Noelle8.jpeg');"><p class="caption">Noelle Deitadinha 3</p></div>
+                </div>
+                <button class="arrow next" onclick="moveSlide('noelle-slider', 1)">&#10095;</button>
+            </div>
+            
+            <div class="grid-videos videos-pet">
+                <div class="video-card">
+                    <video controls><source src="assets/VideoNoelle1.mp4" type="video/mp4"></video>
+                    <span>Noelle dormindinho</span>
+                </div>
+                <div class="video-card">
+                    <video controls><source src="assets/VideoNoelle2.mp4" type="video/mp4"></video>
+                    <span>Noelle nenem!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="carrossel-memorias" class="carrossel-section bg-dark" style="padding-bottom: 120px;">
+        <div class="container anime-up">
+            <h2 class="gradient-text">Eu te amo! ✨</h2>
+            <p class="instrucao">Cada momento ao teu lado é especial e único para mim.</p>
+            
+            <div id="jornada-slider" class="slider-container">
+                <button class="arrow prev" onclick="moveSlide('jornada-slider', -1)">&#10094;</button>
+                <div class="slider">
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_130.png');"><p class="caption">Screenshot 130</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_131.png');"><p class="caption">Screenshot 131</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_132.png');"><p class="caption">Screenshot 132</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_133.png');"><p class="caption">Screenshot 133</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_134.png');"><p class="caption">Screenshot 134</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_135.png');"><p class="caption">Screenshot 135</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_136.png');"><p class="caption">Screenshot 136</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_137.png');"><p class="caption">Screenshot 137</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_138.png');"><p class="caption">Screenshot 138</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_139.png');"><p class="caption">Screenshot 139</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_140.png');"><p class="caption">Screenshot 140</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_141.png');"><p class="caption">Screenshot 141</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_142.png');"><p class="caption">Screenshot 142</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_143.png');"><p class="caption">Screenshot 143</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_144.png');"><p class="caption">Screenshot 144</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_145.png');"><p class="caption">Screenshot 145</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_146.png');"><p class="caption">Screenshot 146</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_147.png');"><p class="caption">Screenshot 147</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_148.png');"><p class="caption">Screenshot 148</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_149.png');"><p class="caption">Screenshot 149</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_150.png');"><p class="caption">Screenshot 150</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_151.png');"><p class="caption">Screenshot 151</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_152.png');"><p class="caption">Screenshot 152</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_153.png');"><p class="caption">Screenshot 153</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_154.png');"><p class="caption">Screenshot 154</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_155.png');"><p class="caption">Screenshot 155</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_156.png');"><p class="caption">Screenshot 156</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_157.png');"><p class="caption">Screenshot 157</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_158.png');"><p class="caption">Screenshot 158</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_159.png');"><p class="caption">Screenshot 159</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_160.png');"><p class="caption">Screenshot 160</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_161.png');"><p class="caption">Screenshot 161</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_162.png');"><p class="caption">Screenshot 162</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_163.png');"><p class="caption">Screenshot 163</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_164.png');"><p class="caption">Screenshot 164</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_165.png');"><p class="caption">Screenshot 165</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_166.png');"><p class="caption">Screenshot 166</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_167.png');"><p class="caption">Screenshot 167</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_168.png');"><p class="caption">Screenshot 168</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_169.png');"><p class="caption">Screenshot 169</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_170.png');"><p class="caption">Screenshot 170</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_171.png');"><p class="caption">Screenshot 171</p></div>
+                    <div class="slide foto-card" style="background-image: url('assets/Screenshot_172.png');"><p class="caption">Screenshot 172</p></div>
+                </div>
+                <button class="arrow next" onclick="moveSlide('jornada-slider', 1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="foto-modal" class="modal-zoom" onclick="fecharZoom()">
+        <span class="fechar-x">&times;</span>
+        <img id="foto-ampliada" src="" alt="Foto ampliada">
+        <p id="legenda-ampliada"></p>
+    </div>
+
+    <button id="btn-topo" onclick="voltarAoTopo()" title="Voltar ao topo">&#8679;</button>
+
+    <audio id="musica" src="assets/Love Like You.mp3" loop></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="function.js"></script>
+</body>
+</html>
